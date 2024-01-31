@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script>
+        function validateForm() {
+          let x = document.forms["myForm"]["fame"].value;
+          if (x == "") {
+            alert("Name must be filled out");
+            return false;
+          }
+        }
+    </script>
+</head>
+<body>
+    <!-- Task 1 -->
+    <section>
+        <div class="header">
+            <img src="./images/logo.png" class="logo">
+        </div>
+
+        <div class="text1">
+            <p>
+                Mussum Ipsum, cacilds vidis litro abertis.  Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! Detraxit consequat et quo num tendi nada. Per aumento de cachacis, eu reclamis. Suco de cevadiss deixa as pessoas mais interessantis.
+            </p>
+
+            <p>
+                Mussum Ipsum, cacilds vidis litro abertis.  Interagi no mé, cursus quis, vehicula ac nisi. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. Mais vale um bebadis conhecidiss, que um alcoolatra anonimis.
+            </p>
+        </div>
+
+        <ul class="list1">
+            <li>Mussum Ipsum, cacilds vidis litro abertis.</li>
+            <li>Per aumento de cachacis, eu reclamis.</li>
+            <li>Mais vale um bebadis conhecidiss, que um alcoolatra anonimis.</li>
+        </ul>
+
+        <div class="footer">
+            <h4 id="foot">Jalasoft, All rights reserved 2024.</h6>
+        </div>
+    </section>
+
+    <!-- Task 2 -->
+    <section>
+        <form name="myForm" method="post">
+            <fieldset>
+                <div>
+                    <label>First Name</label>
+                    <input type="text" name="name" id="name">
+                </div>
+
+                <div>
+                    <label>Last Name</label>
+                    <input type="text" name="surname" id="surname">
+                </div>
+            </fieldset>
+
+            <div>
+                <label>What type of developer are you?</label>
+                <label><input type="radio" name="devweb" value="frontend">Frontend</label>
+                <label><input type="radio" name="devweb" value="backend">Backend</label>
+                <label><input type="radio" name="devweb" value="fullstack">Full Stack</label>
+            </div>
+
+            <div>
+                <label>Seniority</label>
+                <select name="seniority" id="seniority">
+                    <option selected disabled>Choose</option>
+                    <option>Junior</option>
+                    <option>Mid Level</option>
+                    <option>Senior</option>
+                </select>
+            </div>
+
+            <button type="submit" value="submit" id="submit">Submit</button>
+        </form>
+    </section>
+
+    <!-- Task 3 -->
+    <section>
+        <ul id="list">
+            <li id="li1">Mussum Ipsum, cacilds vidis litro abertis.  Pra lá, depois divoltis porris, paradis. Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose. Casamentiss faiz malandris se pirulitá. Bota 1 metro de cachacis aí pra viagem!</li>
+        </ul>
+        <button id="list-button">Add Item</button>
+    </section>
+    <script src="./script.js"></script>
+</body>
+</html>
