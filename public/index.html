@@ -7,12 +7,13 @@
   <title>Service Worker Pré-cache</title>
 </head>
 <body>
+  <noscript>You do not have js running</noscript>
   <h1>Service Worker Pré-cache</h1>
   <img src="images/image1.jpg" alt="Imagem 1">
   <img src="images/image2.jpg" alt="Imagem 2">
   <script>
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/service-worker.js')
+      navigator.serviceWorker.register('./service-worker.js')
         .then(registration => {
           console.log('Service Worker registrado com sucesso:', registration);
         })
