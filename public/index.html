@@ -1,26 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE Html>
+<html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Service Worker Pré-cache</title>
+    <meta charset="utf-8">
+    <title>Cool React Place</title>
 </head>
+
 <body>
-  <noscript>You do not have js running</noscript>
-  <h1>Service Worker Pré-cache</h1>
-  <img src="images/image1.jpg" alt="Imagem 1">
-  <img src="images/image2.jpg" alt="Imagem 2">
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('./service-worker.js')
-        .then(registration => {
-          console.log('Service Worker registrado com sucesso:', registration);
-        })
-        .catch(error => {
-          console.error('Erro ao registrar o Service Worker:', error);
-        });
-    }
-  </script>
+    <div id="root"></div>
+    <script src="../dist/bundle.js"></script>
 </body>
+
 </html>
