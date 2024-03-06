@@ -3,7 +3,7 @@ import ReactDOM from "react-dom"
 import App from "./App.js"
 
 //this is the data that will never appear anywhere
-pokemons = [ {
+var pokemons = [ {
     name: "Charizard",
     type: "fire"
 },

@@ -1,11 +1,13 @@
 import React from 'react'
-import Contextor from '../context/AppContext'
 
 const Footer = () => {
     return (
         <footer className='footer'>
             <p style={ { fontSize: 20 } }>
-                <Contextor />
+                <span style={ { color: 'black' } }>BOTAFOGO F.R.</span>
+                <span style={ { color: 'white' } }> 6</span>
+                <span style={ { color: 'white' } }>   x   0 </span>
+                <span style={ { color: 'CYAN' } }>Aurora</span>
             </p>
         </footer>
     )
