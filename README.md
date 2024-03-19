@@ -1,21 +1,46 @@
-### Voce deve copiar esse projeto para o seu repositorio local inicialmente. Apos copiado vc deve dar push do exercicio para a branch correspondente do seu repositorio de exercicios.
+# Getting Started with Create React App and Redux
 
-# Exercicio 13
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
-O repositorio ja possui uma pagina CounterPage.jsx, counterHook.jsx e uma molecula Counter.jsx. Arquivos onde deve ser implementado o exercicio, poderao ser adicionados outros modulos se voce achar conveniente, mantendo os principios do design atomico.
+## Available Scripts
 
-Voce deve usar o hook useReducer para manter o estado do contador atualizado. O design deve ser simples, apenas um botao para incrementar o contador, um botao para decrementar o contador e uma interface para mostrar a numeracao atualizada apos o clique
+In the project directory, you can run:
 
+### `yarn start`
 
-# Exercicio 14
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-Como vimos durante a aula eh muito dificil remover o comportamento padrao do webpack e babel que por conta de seguranca sempre mantem o build do seu projeto como "use strict". Ou seja, variaveis globais nao podem ser salvas na window do seu projeto, portanto as variaveis do projeto sao sempre inacessiveis logo mais seguras.
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-Em alguns casos nos queremos dar um override nesse tipo de configuracao. Nesta aplicacao estamos usando webpack com babel para compilar nosso codigo em dist/bundle.js.
+### `yarn test`
 
-no index.js temos a variavel pokemons a qual deveria aparecer na minha window. A configuracao "transform-remove-strict-mode" em .babelrc deveria ser o suficiente para remover o "use-strict".
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-Tente remover o use-strict deste projeto, crie em pastas paralelas um projeto create-react-app e um projeto vite, neles voce devera criar uma variavel nos respectivos indicies as quais deverao ser salvas na window apos a remocao do use-strict. 
+### `yarn build`
 
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-Apos a conclusao do seu exercicio crie um readme.md explicando como como conseguiu remover o use-strict em cada projeto ou o porque voce acredita que nao conseguiu remove-lo e quais foram as implementacoes e bibliotecas usadas que falharam na remocao do mesmo.
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `yarn eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).

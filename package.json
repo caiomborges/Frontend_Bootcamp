@@ -1,40 +1,42 @@
 {
-  "name": "cool-react-place",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "dev": "npx webpack serve --mode development",
-    "build": "npx webpack --mode development",
-    "test": "mocha \"src/**/*.test.js\" --require @babel/register --recursive"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@babel/cli": "^7.14.5",
-    "@babel/core": "^7.14.6",
-    "@babel/plugin-transform-runtime": "^7.14.5",
-    "@babel/preset-env": "^7.14.7",
-    "@babel/preset-react": "^7.14.5",
-    "@babel/register": "^7.14.5",
-    "babel-loader": "^8.2.2",
-    "babel-plugin-transform-remove-strict-mode": "^0.0.2",
-    "chai": "^4.3.4",
-    "css-loader": "^5.2.6",
-    "fetch-mock": "^9.11.0",
-    "mocha": "^9.0.2",
-    "node-fetch": "^2.6.1",
-    "react-hot-loader": "^4.13.0",
-    "sinon": "^11.1.1",
-    "style-loader": "^3.0.0",
-    "webpack": "^5.42.0",
-    "webpack-cli": "^4.7.2",
-    "webpack-dev-server": "^3.11.2"
-  },
+  "name": "redux-js",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "@babel/runtime": "^7.14.6",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "@reduxjs/toolkit": "^1.8.1",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.0.1",
+    "@testing-library/user-event": "^14.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.0.1",
+    "react-scripts": "5.0.1",
+    "redux-persist": "^6.0.0",
+    "redux-thunk": "^3.1.0",
+    "web-vitals": "^2.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

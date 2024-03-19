@@ -1,28 +1,26 @@
-import React from "react"
-import ReactDOM from "react-dom"
-import App from "./App.js"
+import React from 'react'
+import { createRoot } from 'react-dom/client'
+import { Provider } from 'react-redux'
+import { store, persistor } from './app/store'
+import App from './App'
+import reportWebVitals from './reportWebVitals'
+import './index.css'
+import { PersistGate } from 'redux-persist/integration/react'
 
-//this is the data that will never appear anywhere
-var pokemons = [ {
-    name: "Charizard",
-    type: "fire"
-},
-{
-    name: "Bulbasaur",
-    type: "grass"
-}, {
-    name: "Squirtle",
-    type: "water"
-}, {
-    name: "Pikachu",
-    type: "electric"
-}
-]
+const container = document.getElementById('root')
+const root = createRoot(container)
 
-ReactDOM.render(
-    <App />,
-    document.getElementById("root")
+root.render(
+  <React.StrictMode>
+    <Provider store={ store }>
+      <PersistGate loading={ null } persistor={ persistor }>
+        <App />
+      </PersistGate>
+    </Provider>
+  </React.StrictMode>
 )
 
-// const root = document.querySelector("#root")
-// ReactDOM.createRoot(root)
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals()
