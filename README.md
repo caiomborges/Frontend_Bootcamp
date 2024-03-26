@@ -1,21 +1,7 @@
-### Voce deve copiar esse projeto para o seu repositorio local inicialmente. Apos copiado vc deve dar push do exercicio para a branch correspondente do seu repositorio de exercicios.
+# Exercício 14
 
-# Exercicio 13
+Uma possível solução seria incluir o array pokemons diretamente na windows usando window.pokemons = pokemons, o que funcionaria para os três projetos. Porém quando falamos de remover o use strict sem alterações manuais, das soluções testadas, como o uso dos plugins/bibliotecas remove-strict-webpack-plugin e webpack5-remove-use-strict-plugin ou a configuração transform-remove-strict-mode no .babelrc, nenhuma funcionou.
 
-O repositorio ja possui uma pagina CounterPage.jsx, counterHook.jsx e uma molecula Counter.jsx. Arquivos onde deve ser implementado o exercicio, poderao ser adicionados outros modulos se voce achar conveniente, mantendo os principios do design atomico.
+Em alguns fóruns sobre este tópico encontrei discussões de que aparentemente se uma função é declarada fora de um contexto strict e chamada dentro de um contexto strict, em tempo de compilação tudo dentro de seu escopo será tratado sem strict mode. Porém nenhuma das implementações do tipo que testei funcionaram, talvez seja algo que foi removido nas versões mais recentes do javascript.
 
-Voce deve usar o hook useReducer para manter o estado do contador atualizado. O design deve ser simples, apenas um botao para incrementar o contador, um botao para decrementar o contador e uma interface para mostrar a numeracao atualizada apos o clique
-
-
-# Exercicio 14
-
-Como vimos durante a aula eh muito dificil remover o comportamento padrao do webpack e babel que por conta de seguranca sempre mantem o build do seu projeto como "use strict". Ou seja, variaveis globais nao podem ser salvas na window do seu projeto, portanto as variaveis do projeto sao sempre inacessiveis logo mais seguras.
-
-Em alguns casos nos queremos dar um override nesse tipo de configuracao. Nesta aplicacao estamos usando webpack com babel para compilar nosso codigo em dist/bundle.js.
-
-no index.js temos a variavel pokemons a qual deveria aparecer na minha window. A configuracao "transform-remove-strict-mode" em .babelrc deveria ser o suficiente para remover o "use-strict".
-
-Tente remover o use-strict deste projeto, crie em pastas paralelas um projeto create-react-app e um projeto vite, neles voce devera criar uma variavel nos respectivos indicies as quais deverao ser salvas na window apos a remocao do use-strict. 
-
-
-Apos a conclusao do seu exercicio crie um readme.md explicando como como conseguiu remover o use-strict em cada projeto ou o porque voce acredita que nao conseguiu remove-lo e quais foram as implementacoes e bibliotecas usadas que falharam na remocao do mesmo.
+Minha conclusão sobre este problema é de que provavelmente durante a construção dos projetos, seja com webpack, create-react-app ou vite, devem ser adicionadas medidas para justamente evitar esse tipo de override de escopo/contexto, seja por questões de segurança ou apenas para garantir que o código siga o padrão do strict context. Portanto, talvez seja possível fazer alguma alteração durante a construção dos projetos para evitar a criação do strict context, mas todas as tentativas de fazer essa alteração após a criação do projeto falharam.
