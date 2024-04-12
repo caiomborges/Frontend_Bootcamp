@@ -1,31 +1,19 @@
 
-import { createContext, FC, ReactNode, useContext } from 'react';
-
-// Define the shape of the user context
-interface UserContextType {
-    // Define the properties and methods of the user context
-    // ...
-}
+import { createContext, FC, ReactNode, useMemo, useState } from 'react';
+import UserContextType from '../interfaces/UserContextType';
+import User from '../interfaces/user';
 
 // Creates the user context
-const UserContext = createContext<UserContextType | undefined>(undefined);
-
-// Creates a custom hook to access the user context
-export const useUserContext = (): UserContextType => {
-    const context = useContext(UserContext);
-    if (!context) {
-        throw new Error('useUserContext must be used within a UserContextProvider');
-    }
-    return context;
-};
+const UserContext = createContext<UserContextType>({ user: null, setUser: () => {} });
 
 // Creates the user context provider component
 export const UserContextProvider: FC<{ children: ReactNode }> = ({ children }) => {
     // Define the state and methods for the user context
-    // ...
+    const [user, setUser] = useState<User | null>(null);
+    const memoUser = useMemo(() => ({ user, setUser }), [user, setUser]);
 
     return (
-        <UserContext.Provider value={/* Provide the value of the user context */}>
+        <UserContext.Provider value={memoUser}>
             {children}
         </UserContext.Provider>
     );
